@@ -26,7 +26,7 @@ class TCPClient:
         try:
             # Connect to the server
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            client_socket.connect(('192.168.0.110', 4444))
+            client_socket.connect(('0.0.0.0', 4444))
             client_socket.sendall(msg.encode())
             client_socket.close()
             messagebox.showinfo("Info", "Message sent successfully!")
