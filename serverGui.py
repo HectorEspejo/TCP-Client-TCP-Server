@@ -40,7 +40,7 @@ class TCPServer:
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server_socket.settimeout(1)  # Set a timeout of 1 second
         try:
-            self.server_socket.bind(('192.168.0.110', port))
+            self.server_socket.bind(('0.0.0.0', port))
             self.server_socket.listen(5)
             self.label_info.config(text=f"Server started on 0.0.0.0:{port}")
             self.is_running.set()
